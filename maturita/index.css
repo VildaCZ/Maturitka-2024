@@ -1,0 +1,558 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black!important;
+    text-align: center;
+    color: #fff !important;
+  }
+
+/* Header */
+
+  header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    transition: background-color 1.0s ease-in-out;
+    z-index: 10;
+    text-decoration: none;
+    animation: fade-up 1.5s;
+  }
+  .logo {
+    float: left;
+    margin-left: 20px;
+    width: 50px; 
+    height: auto;
+  }  
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  nav {
+    padding: 0;
+    margin: 5px;
+    width: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  li a {
+    display: block;
+    color: #fff !important;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+  }
+
+  /* Telefonní velikost navbaru */
+
+  @media only screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+    }
+  
+    nav.active {
+      display: block;
+      width: 100%; 
+    }
+  
+    ul {
+      float: none;
+      text-align: center; 
+      background-color: black; 
+      padding: 0% !important;
+    }
+  
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    .logo {
+      display: none;
+    }
+  }
+  
+  header.scroll {
+    background-color: black !important;
+  }
+  
+  
+/* Úvodní obrázek */
+
+  .wallp{
+    position: relative;
+    z-index: -2 !important;
+ }
+ .wallp img{
+    width: 90%;
+    animation: fade 1s;
+ }
+ h1{
+    padding-top: 20%;
+    z-index: 6 !important;
+ }
+
+/* O nás */
+
+.podtrzitko{
+  border: 2.5px solid #FF8C24;
+  opacity: 100%;
+}
+
+.popis{
+  font-size: large;
+  font-family: "Roboto", sans-serif;
+}
+
+.container{
+  margin-top: 10%;
+}
+
+ h3{
+  margin: 0;
+}
+.our-team{
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.our-team:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transition:all 0.3s ease 0s;
+  opacity: 0;
+
+}
+.our-team:hover:before{
+  opacity: 1;
+}
+.our-team img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px !important;
+}
+.our-team .team-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background-color: #FF8C24;
+  transition:all 0.3s ease 0s;
+  border-radius: 20px !important;
+}
+.our-team:hover .team-content{
+  bottom: 20%;
+}
+.our-team .team-content .name{
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  transition:all 0.3s ease 0s;
+}
+.our-team:hover .team-content .name{
+  transform:translateY(30px);
+  transition-delay:0.3s;
+}
+.our-team .team-content .post{
+  font-size: 17px;
+  display: block;
+  transition:all 0.3s ease 0s;
+}
+.our-team:hover .team-content .post{
+  transform:translateY(-30px);
+  transition-delay:0.3s;
+}
+
+/* Mobilní Velikost sekce O nás */
+
+@media screen and (max-width:990px){
+  .our-team{
+      margin-bottom: 30px !important;
+  }
+}
+ 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15%;
+}
+
+.text {
+  border: 2px solid #FF8C24; 
+  background-color: black; 
+  width: 50%; 
+  margin: auto; 
+  padding: 20px;
+  box-shadow: 0.5rem 7px #FF8C24;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  margin-left: 20px; 
+}
+
+img {
+  max-width: 120%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text, .image {
+    flex: none;
+    width: 100%;
+    margin: 0; 
+    margin-top: 10%;
+  }
+}
+
+/* Slideshow */
+
+.slider {
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  padding-top: 63%;
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider .trigger {
+  height: 15px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 8px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  z-index: 1;
+}
+
+.slider .trigger label {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.slider #slide1:checked ~ .trigger label[for="slide1"],
+.slider #slide2:checked ~ .trigger label[for="slide2"],
+.slider #slide3:checked ~ .trigger label[for="slide3"],
+.slider #slide4:checked ~ .trigger label[for="slide4"],
+.slider #slide5:checked ~ .trigger label[for="slide5"] {
+  background: #FF8C24;
+}
+
+.slider #slide2:checked ~ .gallery { transform: translateX(-20%); }
+.slider #slide3:checked ~ .gallery { transform: translateX(-40%); }
+.slider #slide4:checked ~ .gallery { transform: translateX(-60%); }
+.slider #slide5:checked ~ .gallery { transform: translateX(-80%); }
+
+.slider label:last-child { margin: 0; }
+
+.slider .arrows {
+  position: absolute;
+  color: #FF8C24;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.slider .arrows i {
+  cursor: pointer;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
+}
+
+.slider .arrows i.fa-angle-right:hover {
+  -webkit-animation: click-right 0.7s linear;
+          animation: click-right 0.7s linear;
+}
+
+.slider .arrows i.fa-angle-left:hover {
+  -webkit-animation: click-left 0.7s linear;
+          animation: click-left 0.7s linear;
+}
+
+.slider .gallery {
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all .5s ease-in-out;
+}
+
+.slider figure {
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.slider figure figcaption {
+  position: absolute;
+  bottom: 65px; 
+  left: 10px; 
+  color: #fff;
+  width: calc(100% - 20px); 
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85em;
+  z-index: 1;
+}
+
+
+.slider figure img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 860px) {
+  .slider {width: 70%; padding-top: 46%; margin: 0 auto;}
+  .slider figure img { width: 100%; }
+}
+
+@-webkit-keyframes click-right {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(13px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(13px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes click-right {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(13px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(13px); }
+  100% { transform: translateX(0px); }
+}
+
+@-webkit-keyframes click-left {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-13px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-13px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes click-left {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-13px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-13px); }
+  100% { transform: translateX(0px); }
+}
+
+/* Footer */
+
+.footer{
+background:#000;
+padding:30px 0px;
+margin-top: 20%;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+display: block;
+}
+
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+/* Mobilní velikost footeru */
+
+@media (max-width:720px){
+.footer{
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+
+/* !!!!dodělávky/vychytávky!!!! */
+
+/* Efekty */
+
+@keyframes fade-up {
+	0% {
+			opacity: 0;
+			transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes fade {
+	0% {
+			opacity: 0;
+			
+	}
+
+	60% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		
+	}
+}
+
+/* Titles */
+
+.nazev{
+  position: absolute;
+  top: 42.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 1));
+  animation: fade 1.8s;
+  font-family: "Roboto", sans-serif;
+}
+
+.axezon{
+  font-size: 625%;
+  font-stretch: expanded;
+}
+
+.nadpis-onas{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Footer ikony */
+
+.fa-brands{
+  margin-left: 1.8%;
+  margin-right: 1.8%;
+  margin-top: 1.8%;
+}
+
+.ikony{
+  font-size: 250%;
+  color: #FF8C24;
+  text-decoration: none;
+}
+
+.footer a{
+  color: #FF8C24;
+}
+
+.footer a:hover{
+  color: #fff;
+}
+
+.spoluprace{
+  color: #FF8C24;
+}
+
+.spoluprace:hover{
+  color: #fff;
+}
+
+/* KONEC FINITO ENDE SLUSH ZA JEDNA PROSIM DIKY (vtipek) */
